@@ -1,12 +1,13 @@
-<div id="dropsearch">
+<div class="dropsearch" [style.--pcolor]="color" [style.--w]="width" [style.margin]="margin">
     <div class='shinput'>
-        <input #shdropsh id="inputsh" [(ngModel)]="value" (keyup)='onChange($event)' (focusout)="lostFocus($event)" [placeholder]="placeholder"/>
+        <input #shdropsh [(ngModel)]="value" (keyup)='onChange($event)' (focusout)="lostFocus($event)"
+            [placeholder]="placeholder" (focus)="focus($event)" autocomplete="off" />
         <div class="shsearch" *ngIf="!value" (click)="shdropsh.focus()"></div>
         <div class="clsearch" *ngIf="value" (click)="value = ''; event.emit(null)"></div>
     </div>
-    <div id='dropsh' *ngIf="values.length>0">
+    <div class='dropsh' *ngIf="values.length>0 && show">
         <div class='item' *ngFor="let item of list" (click)="select(item)">
-            {{item.label}} ({{item.value}})
+            {{item[keylabel]}} ({{item[keyvalue]}})
         </div>
     </div>
 </div>

@@ -1,5 +1,8 @@
 <div style="padding: 50px;">
-  <dropsearch color="#155555" width="800px" [values]="values" (event)="resposta($event)"></dropsearch>
+  <dropsearch color="#303015" width="800px" [values]="values" (event)="resposta($event)" margin="45px"></dropsearch>
+  <br>
+  <dropsearch color="#155555" width="300px" [values]="values2" (event)="resposta($event)" keyvalue="id" keylabel="texto"></dropsearch>
+
 </div>
 
 <router-outlet></router-outlet>

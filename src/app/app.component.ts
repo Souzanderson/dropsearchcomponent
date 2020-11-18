@@ -19,6 +19,12 @@ export class AppComponent {
     { value: 9, label: 'Empresa 9' },
     { value: 10, label: 'Empresa 10' },
   ]
+  values2 = [
+    { id: 1, texto: 'Empresa 1' },
+    { id: 8, texto: 'Empresa 8' },
+    { id: 9, texto: 'Empresa 9' },
+    { id: 10, texto: 'Empresa 10' },
+  ]
 
   resposta(value) {
     console.log("Valor: " + value);
